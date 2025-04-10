@@ -11,5 +11,13 @@ export default defineConfig({
   build: {
     outDir: 'dist',
     emptyOutDir: true
+  },
+  resolve: {
+    extensions: ['.js', '.jsx', '.json']
+  },
+  esbuild: {
+    loader: 'jsx',
+    include: /src\/.*\.jsx?$/,
+    exclude: []
   }
 });
